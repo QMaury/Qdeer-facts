@@ -35,7 +35,7 @@ static char     *verb[] = {
         "fuck each other",      "have sex",             "laugh",
         "fall over",            "burp",                 "cry",
         "commit war crimes",    "eat food",             "frown",
-        "write a C compiler"    "write a LISP interpreter",     "install Gentoo",
+        "write a C compiler",   "write a LISP interpreter",     "install Gentoo",
         "install Arch Linux",   "shoplift",             "stand on their hind legs",
         "stand on their front legs",                    "brush their teeth",
 };
