@@ -1,4 +1,4 @@
-/* deerfacts.c
+/* qdeerfacts.c
  * QMaury <qmaury@goat.si>
  *
  * This is based off a program called sex.c that I did not write
@@ -32,19 +32,28 @@ static char     *verb[] = {
         "pass out",             "squirt",               "combust",
         "paint pretty paintings",       "drink heavily","shout",
         "read",                 "masturbate",           "jerk off",
-        "fuck each other",      "have sex"              "get sad",
-        "get happy",            "laugh",                "fall over",
+        "fuck each other",      "have sex",             "laugh",
+        "fall over",            "burp",                 "cry",
+        "commit war crimes",    "eat food",             "frown",
+        "write a C compiler"    "write a LISP interpreter",     "install Gentoo",
+        "install Arch Linux",   "shoplift",             "stand on their hind legs",
+        "stand on their front legs",                    "brush their teeth",
 };
 
 static char     *when[] = {
-        "when they",
+        "when they",            "if they",              "every time they",
+        "because they",
 };
 
 
 static char     *reason[] = {
-   "are hungry",           "are bored",       "feel masochistic",
-   "are sad",              "are angry",         "feel apathetic",
-   "are horny",                 "are sleepy",   "are furious",
+   "are hungry.",           "are bored.",       "feel masochistic.",
+   "are sad.",              "are angry.",         "feel apathetic.",
+   "are horny.",                 "are sleepy.",   "are furious.",  
+   "need to shit.",         "need to piss.",      "are erect.",
+   "are unhappy with their current operating system.",  "have diarrhea.",
+   "are insecure about their penis size.",               "are thirsty.",
+   "feel gross",                "feel naughty",
 };
 
 struct table {
@@ -74,16 +83,7 @@ int main(int argc, char **argv)
    char buffer[2048];
    int pos, lastword;
 
-   wraplen = 0;
-   if (argc > 1) {
-	if (!strcmp(argv[1],"-w")) {
-	    if (argc == 3) {
-		wraplen = atoi(argv[2]);
-	    } else {
-		wraplen = LLINE;
-	    }
-	}
-   }
+   wraplen = 50;
 
    now = time(&now) / random();
    srandom(getpid() + (int)((now >> 16) + now + time(&now)));
