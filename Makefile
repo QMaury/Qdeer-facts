@@ -23,4 +23,4 @@ clean:
 	rm -f core.* vgcore.* callgrind.out.*
 
 install:
-	cp $(EXECUTABLE) /usr/bin/$(EXECUTABLE)
+	sudo cp $(EXECUTABLE) /usr/bin/$(EXECUTABLE)
